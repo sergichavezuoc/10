@@ -6,7 +6,14 @@
 
 <h2>Lista canciones</h2>
 <ul class="canciones">
-  <li *ngFor="let cancion of canciones">
+  <li *ngFor="let cancion of canciones"  (click)="onSelect(cancion)">
     <span class="badge">{{cancion.id}}</span> Título: <b>{{cancion.titulo}}</b> Autor: <b>{{cancion.autor}}</b> Album: <b>{{cancion.album}}</b> Año: <b>{{cancion.anyo}}</b> Género: <b>{{cancion.genero}}</b>
   </li>
 </ul>
+<div *ngIf="selectedCancion">
+<h2>{{selectedCancion.titulo | uppercase}} Datos</h2>
+<div><span>Autor: </span>{{selectedCancion.autor}}</div>
+<div>
+  <label>Album: {{selectedCancion.album}}
+  </label>
+</div></div>

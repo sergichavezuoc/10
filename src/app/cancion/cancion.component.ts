@@ -8,6 +8,10 @@ import { CANCIONES } from "../mock-canciones";
 })
 export class CancionComponent implements OnInit {
   canciones = CANCIONES;
+  selectedCancion!: Cancion;
+  onSelect(cancion: Cancion): void {
+    this.selectedCancion = cancion;
+  }
   cancion: Cancion = {
     id: 1,
     autor: "Los Ronaldos",
