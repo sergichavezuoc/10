@@ -3,3 +3,10 @@
 <p>Album: <b>{{cancion.album}}</b></p>
 <p>Año: <b>{{cancion.anyo}}</b></p>
 <p>Género: <b>{{cancion.genero}}</b></p>
+
+<h2>Lista canciones</h2>
+<ul class="canciones">
+  <li *ngFor="let cancion of canciones">
+    <span class="badge">{{cancion.id}}</span> Título: <b>{{cancion.titulo}}</b> Autor: <b>{{cancion.autor}}</b> Album: <b>{{cancion.album}}</b> Año: <b>{{cancion.anyo}}</b> Género: <b>{{cancion.genero}}</b>
+  </li>
+</ul>
